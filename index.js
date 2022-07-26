@@ -13,7 +13,7 @@ element_list.appendChild(new_img);
 document.getElementById('button').addEventListener('click', (event) => {
   current = array.pop();
   let element_image2 = document.getElementById('image');
-  element_image2.setAttribute("src", current);
+  element_image2.setAttribute("src", array[1]);
   array.unshift(current);
 
 });
@@ -21,7 +21,7 @@ document.getElementById('button').addEventListener('click', (event) => {
 document.getElementById('button2').addEventListener('click', (event) => {
   current = array.shift();
   let element_image3 = document.getElementById('image');
-  element_image3.setAttribute("src", current);
+  element_image3.setAttribute("src", array[2]);
   array.push(current);
 
 });
