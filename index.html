@@ -1,30 +1,29 @@
 <html>
-<p id="story">A story about Red Hood Riding!</p>
-
-<div id="list"><img id ="image" height="345px" width="450px"></div> 
-<button id="button">Turn the page</button>
-<script>
-var pictures, current, titles, current_title;
+var current, array;
 
 
-pictures = ['https://assets.americanliterature.com/al/images/story/little-red-riding-hood.jpg', 'https://www.storynory.com/wp-content/uploads/2010/12/Red-02-480x480.jpg?ezimgfmt=ng:webp/ngcb6', 'https://i0.wp.com/smartkids123.com/wp-content/uploads/2021/04/Little-Red-Riding-Hood-Story-With-Pictures_05.jpg?w=700&ssl=1', 'https://images.saatchiart.com/saatchi/1165159/art/7775535/6843544-HSC00001-7.jpg'];
+array = ['https://oceanvisions.org/wp-content/uploads/2021/09/joseph-barrientos-oQl0eVYd_n8-unsplash-Custom.jpg', 'https://image.shutterstock.com/image-photo/beach-tropical-sea-600w-664029658.jpg', 'https://image.shutterstock.com/image-photo/coconut-palm-trees-grow-on-600w-723806818.jpg'];
 let element_list = document.getElementById('list');
 let new_img = document.createElement('img');
 let element_image = document.getElementById('image');
-element_image.setAttribute("src", pictures.shift());
+element_image.setAttribute("src", array[0]);
 
 element_list.appendChild(new_img);
-titles = ['Once upon a time, there was a little girl who lived in a village near the forest.  Whenever she went out, the little girl wore a red riding cloak, so everyone in the village called her Little Red Riding Hood.', '"That\'s a good idea," her mother said.  So they packed a nice basket for Little Red Riding Hood to take to her grandmother.', '"Don\'t worry, mommy," said Little Red Riding Hood, "I\'ll be careful."', 'The end!'];
 
 
 document.getElementById('button').addEventListener('click', (event) => {
-  current = pictures.shift();
+  current = array.pop();
   let element_image2 = document.getElementById('image');
   element_image2.setAttribute("src", current);
-  current_title = titles.shift();
-  let element_story = document.getElementById('story');
-  element_story.innerText = current_title;
-  element_story.style.backgroundColor = '#ffff99';
+  array.unshift(current);
+
+});
+
+document.getElementById('button2').addEventListener('click', (event) => {
+  current = array.shift();
+  let element_image3 = document.getElementById('image');
+  element_image3.setAttribute("src", current);
+  array.push(current);
 
 });
 
