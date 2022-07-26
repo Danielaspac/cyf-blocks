@@ -1,37 +1,20 @@
-
-</header>-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My home page</title>
-  </head>
-
-  <body>
-
-var pictures, current, titles, current_title;
-
-
-pictures = ['https://assets.americanliterature.com/al/images/story/little-red-riding-hood.jpg', 'https://www.storynory.com/wp-content/uploads/2010/12/Red-02-480x480.jpg?ezimgfmt=ng:webp/ngcb6', 'https://i0.wp.com/smartkids123.com/wp-content/uploads/2021/04/Little-Red-Riding-Hood-Story-With-Pictures_05.jpg?w=700&ssl=1', 'https://images.saatchiart.com/saatchi/1165159/art/7775535/6843544-HSC00001-7.jpg'];
-let element_list = document.getElementById('list');
-let new_img = document.createElement('img');
-let element_image = document.getElementById('image');
-element_image.setAttribute("src", pictures.shift());
-
-element_list.appendChild(new_img);
-titles = ['Once upon a time, there was a little girl who lived in a village near the forest.  Whenever she went out, the little girl wore a red riding cloak, so everyone in the village called her Little Red Riding Hood.', '"That\'s a good idea," her mother said.  So they packed a nice basket for Little Red Riding Hood to take to her grandmother.', '"Don\'t worry, mommy," said Little Red Riding Hood, "I\'ll be careful."', 'The end!'];
-
-
-document.getElementById('button').addEventListener('click', (event) => {
-  current = pictures.shift();
-  let element_image2 = document.getElementById('image');
-  element_image2.setAttribute("src", current);
-  current_title = titles.shift();
-  let element_story = document.getElementById('story');
-  element_story.innerText = current_title;
-  element_story.style.backgroundColor = '#ffff99';
-
-});
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
   
-  <script scr="cyf.js" ></script>
-    </body>
+  </head>
+  
+  <body>
+	<script src="index.js"></script>
+    <p id="like">Things I like the most!</p>
+
+<div id="list"><img id ="image" height="150px" width="250px"></div> 
+<button id="button">next</button>
+
+  </body>
 </html>
