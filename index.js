@@ -1,7 +1,7 @@
-var current, array;
+var current;
 
 
-array = ['https://oceanvisions.org/wp-content/uploads/2021/09/joseph-barrientos-oQl0eVYd_n8-unsplash-Custom.jpg', 'https://image.shutterstock.com/image-photo/beach-tropical-sea-600w-664029658.jpg', 'https://image.shutterstock.com/image-photo/coconut-palm-trees-grow-on-600w-723806818.jpg'];
+var array = ['https://oceanvisions.org/wp-content/uploads/2021/09/joseph-barrientos-oQl0eVYd_n8-unsplash-Custom.jpg', 'https://image.shutterstock.com/image-photo/beach-tropical-sea-600w-664029658.jpg', 'https://image.shutterstock.com/image-photo/coconut-palm-trees-grow-on-600w-723806818.jpg'];
 let element_list = document.getElementById('list');
 let new_img = document.createElement('img');
 let element_image = document.getElementById('image');
