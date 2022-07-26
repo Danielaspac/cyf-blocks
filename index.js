@@ -1,18 +1,27 @@
-var pictures, current;
+var current, array;
 
 
-pictures = ['https://www.tripsavvy.com/thmb/z-SvrgxOAdXfJaakmeeGuPtc-Mo=/375x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-458234687-5b48ce13c9e77c0037ad27b3.jpg', 'https://www.simplyrecipes.com/thmb/msM5TVo6eVt50ITnlzW63NYd_tc=/648x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Mint-ChocolateChip-LEAD-1-238fca38e0a14785b04c8754e438ef14.jpg', 'https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half-caption/public/field_blog_entry_images/2022-04/kittens-cat-cat-puppy-rush-45170.jpeg?itok=NpmyBY9k'];
+array = ['https://oceanvisions.org/wp-content/uploads/2021/09/joseph-barrientos-oQl0eVYd_n8-unsplash-Custom.jpg', 'https://image.shutterstock.com/image-photo/beach-tropical-sea-600w-664029658.jpg', 'https://image.shutterstock.com/image-photo/coconut-palm-trees-grow-on-600w-723806818.jpg'];
 let element_list = document.getElementById('list');
 let new_img = document.createElement('img');
 let element_image = document.getElementById('image');
-element_image.setAttribute("src", pictures.shift());
+element_image.setAttribute("src", array[0]);
 
 element_list.appendChild(new_img);
 
 
 document.getElementById('button').addEventListener('click', (event) => {
-  current = pictures.shift();
+  current = array.pop();
   let element_image2 = document.getElementById('image');
   element_image2.setAttribute("src", current);
+  array.unshift(current);
+
+});
+
+document.getElementById('button2').addEventListener('click', (event) => {
+  current = array.shift();
+  let element_image3 = document.getElementById('image');
+  element_image3.setAttribute("src", current);
+  array.push(current);
 
 });
